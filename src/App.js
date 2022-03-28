@@ -1,10 +1,14 @@
+import React from 'react';
+import WeatherCard from './components/WeatherCard';
+import CitySelector from './components/CitySelector';
+import { Container } from 'react-bootstrap';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Container className="App">
+      <CitySelector />
+    </Container>
   );
 }
 
