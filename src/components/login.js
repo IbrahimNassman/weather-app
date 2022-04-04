@@ -6,6 +6,7 @@ const Login = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
+    
     //alert(JSON.stringify(data));
     console.log(data);
 };
@@ -14,12 +15,12 @@ const Login = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label htmlFor="firstName">First Name</label>
-                <input {...register("firstName")} placeholder="first name" />
+                <input {...register("firstName")} placeholder="first name" required />
             </div>
 
             <div>
                 <label htmlFor="lastName">Last Name</label>
-                <input {...register("lastName")} placeholder="last name" />
+                <input {...register("lastName")} placeholder="last name" required />
             </div>
 
             <div>
@@ -40,7 +41,8 @@ const Login = () => {
                 type="email"
                 />
             </div>
-            <input type="submit" />
+            <input type="submit"/>
+            
             </form>
     </div>
     )
