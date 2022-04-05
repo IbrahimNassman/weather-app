@@ -13,6 +13,7 @@ const WeatherList = ({weathers}) => {
                     dt={dt * 1000} 
                     main={weather[0].main} 
                     icon={weather[0].icon} 
+                
                 />
                 </Col>
             ))} 

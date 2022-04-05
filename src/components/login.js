@@ -6,9 +6,11 @@ const Login = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
+        
+        // { register ?  alert( "successfully registered" ) :  alert( "Erro registered" )}
     
-    //alert(JSON.stringify(data));
-    console.log(data);
+     alert( JSON.stringify(data) );
+    //  console.log(data);
 };
     return (
     <div className='login'>

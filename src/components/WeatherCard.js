@@ -17,9 +17,9 @@ const WeatherCard = ({dt, temp_min, temp_max, main, icon}) => {
             {date.toLocaleDateString()}
             </p>
         {/* minimum temperature */}
-        <p>Min: {temp_min}</p>
+        <p>Min: {temp_min} &deg;C</p>
         {/* maximum temperature */}
-        <p>Max: {temp_max}</p>
+        <p>Max: {temp_max} &deg;C</p>
         </Card.Body>
     </div>
     );
