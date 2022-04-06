@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+// import { Link } from 'react-router-dom'
 import '../styles/login.css';
 
 const Login = () => {
@@ -43,9 +44,10 @@ const Login = () => {
                 type="email"
                 />
             </div>
-            <input type="submit"/>
             
+               <input type="submit"/>
             </form>
+            <a href='/registerForm' className='register-lable'> Resister </a>
     </div>
     )
 }

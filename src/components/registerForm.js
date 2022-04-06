@@ -1,88 +1,11 @@
 import React from 'react'
-import { useForm, Controller } from "react-hook-form";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import Select from "react-select";
 
 
 const RegisterForm = () => {
-  const { register, handleSubmit, errors, control } = useForm({
-    mode: "onBlur"
-  });
-
-  const selectOptions = [
-    { value: "student", label: "Student" },
-    { value: "developer", label: "Developer" },
-    { value: "manager", label: "Manager" }
-  ];
-
-  const handleRegistration = (data) => console.log(data);
-
-  const handleError = (errors) => {
-    console.log(errors);
-  };
-
-  const registerOptions = {
-    name: { required: true },
-    email: { required: "Email is required" },
-    password: {
-      required: "Password is required",
-      minLength: {
-        value: 8,
-        message: "Password must have at least 8 characters"
-      }
-    },
-    role: { required: "Role is required" }
-  };
 
   return (
-    <Form onSubmit={handleSubmit(handleRegistration, handleError)}>
-    <FormGroup>
-      <Label>Name</Label>
-      {/* <input {...register('test', { required: true })} /> */}
-      <Input name="name" {...register("name")} />
-      <small className="text-danger">
-        {errors.name && errors.name.message}
-      </small>
-    </FormGroup>
-    <FormGroup>
-      <Label>Email</Label>
-      <Input
-        type="email"
-        name="email"
-        {...register("email")}
-      />
-      <small className="text-danger">
-        {errors.email && errors.email.message}
-      </small>
-    </FormGroup>
-    <FormGroup>
-      <Label>Password</Label>
-      <Input
-        type="password"
-        name="password"
-
-        {...register("password")}
-      />
-      <small className="text-danger">
-        {errors.password && errors.password.message}
-      </small>
-    </FormGroup>
-    <FormGroup>
-      <Label>Your Role</Label>
-      <Controller
-        name="role"
-        control={control}
-        as={Select}
-        options={selectOptions}
-        defaultValue=""
-        rules={registerOptions.role}
-      />
-      <small className="text-danger">
-        {errors.role && errors.role.message}
-      </small>
-    </FormGroup>
-    <Button color="primary">Submit</Button>
-  </Form>
+    <div>Register Page</div>
+    
   )
 }
 
