@@ -18,7 +18,7 @@ const {data, error, isLoading, setUrl} = UseFetch();
   return (
     <Container className="App">
       {/* <Login /> */}
-      <CitySelector onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=3f87189f1aac3532836f8ddb60ca2990`)} />
+      <CitySelector onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=3f87189f1aac3532836f8ddb60ca2990`)}/>
       {getContent()}
     </Container>
   );
