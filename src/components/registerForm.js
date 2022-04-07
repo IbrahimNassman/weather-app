@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
 import { Input, UnstyledButton} from '@mantine/core'
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 import '../styles/registerform.css'
 
 
@@ -14,7 +15,8 @@ const RegisterForm = () => {
      console.log(JSON.stringify(data));
      if (data.current_password !== null) {
       if (data.confirm_password === data.password) {
-        console.log('successfully')
+        console.log('successfully');
+        <Link to="/">Navbar</Link>
       } else {
         console.log('not successfully')
       }

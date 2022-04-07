@@ -13,6 +13,7 @@ const Login = () => {
     
      alert( JSON.stringify(data) );
     console.log(data);
+    <Link to={'/'}>wewewewew</Link>
      
 };
     return (
