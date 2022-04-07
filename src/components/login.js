@@ -4,7 +4,7 @@ import '../styles/login.css';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
-
+    
     const onSubmit = (data) => {
     
     //alert(JSON.stringify(data));
@@ -34,7 +34,7 @@ const Login = () => {
             </div>
 
             <div>
-                <label htmlFor="email">Email</label>
+                <label type="email">Email</label>
                 <input
                 {...register("email")}
                 placeholder="user@gmail.com"
