@@ -19,7 +19,7 @@ h1 {
 }
 
 .form {
-    background: #0e101c;
+    /* background: #0e101c; */
     max-width: 400px;
     margin: 0 auto;
 }
@@ -93,7 +93,7 @@ input[type="submit"] {
 }
 
 .login {
-    background: #0e101c;
+    background: #a8b543;
     height: 40rem;
     max-width: 600px;
     margin: 5rem auto;

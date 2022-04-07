@@ -1,7 +1,8 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
-// import { Link } from 'react-router-dom'
 import '../styles/login.css';
+import { Link } from 'react-router-dom'
+
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -11,7 +12,8 @@ const Login = () => {
         // { register ?  alert( "successfully registered" ) :  alert( "Erro registered" )}
     
      alert( JSON.stringify(data) );
-    //  console.log(data);
+    console.log(data);
+     
 };
     return (
     <div className='login'>
@@ -45,9 +47,13 @@ const Login = () => {
                 />
             </div>
             
-               <input type="submit"/>
+               <input
+                type="submit"
+                />
+                <Link to="/">rtrtrtrt</Link>
             </form>
             <a href='/registerForm' className='register-lable'> Resister </a>
+            <a href='/' > Back to home </a>
     </div>
     )
 }
