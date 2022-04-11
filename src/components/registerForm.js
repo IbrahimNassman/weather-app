@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useForm } from "react-hook-form";
 import { Input, PasswordInput, Button} from '@mantine/core'
@@ -20,8 +19,16 @@ const RegisterForm = () => {
 
 
 const onSubmit = (data) => {
-
-  setRegister(data)
+  const array = []
+  if (userDetails.length > 1) {
+    userDetails.map((user) => {
+      array.push(user)
+    })
+  } else {
+    array.push(userDetails[0])
+  }
+  array.push(data)
+  setRegister(array)
 } 
   
 const goToLogin = ()=>{
@@ -40,7 +47,7 @@ const goToLogin = ()=>{
           placeholder='Enter your password..'
           required  
         />
-        <Button type="submit" 
+        <Button type="submit" onClick={goToLogin}
         > Submit </Button>
     </form> 
     

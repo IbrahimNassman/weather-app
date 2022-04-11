@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import { Input, PasswordInput, Button} from '@mantine/core'
 import '../styles/login.css';
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import { useLocalStorage } from '@mantine/hooks';
 
 const Login = () => {
