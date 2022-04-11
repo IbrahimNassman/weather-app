@@ -1,61 +1,38 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { Input, PasswordInput, Button} from '@mantine/core'
 import '../styles/login.css';
 import { Link } from 'react-router-dom'
-
+import { useLocalStorage } from '@mantine/hooks';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
-
+    const [userdata] = useLocalStorage({key:'userDetails'});
     const onSubmit = (data) => {
         
-        // { register ?  alert( "successfully registered" ) :  alert( "Erro registered" )}
+const userExist =()=>{ 
+
+    console.table(data)
+    console.table(userdata)
+        //kolla om användaren existerar i userDB
+    } 
+userExist()
+
     
-     alert( JSON.stringify(data) );
-    console.log(data);
-    <Link to={'/'}>wewewewew</Link>
-     
 };
     return (
-    <div className='login'>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-                <label htmlFor="firstName">First Name</label>
-                <input {...register("firstName")} placeholder="first name" required />
-            </div>
+<form onSubmit={handleSubmit(onSubmit)}>
+        <h1 className='p-4'>Login</h1>
+    <Input type="email" {...register("email", { required: true })} placeholder="Email"/>
+    <PasswordInput
+        type="password"
+        {...register('password')}
+        placeholder='Enter your password..'
+        required  
+        />
+        <Button type="submit"  > Submit </Button>
+    </form> 
 
-            <div>
-                <label htmlFor="lastName">Last Name</label>
-                <input {...register("lastName")} placeholder="last name" required />
-            </div>
-
-            <div>
-                <label htmlFor="User">Are you User?</label>
-                <input
-                type="checkbox"
-                {...register("User")}
-                placeholder="User"
-                value="yes"
-                />
-            </div>
-
-            <div>
-                <label htmlFor="email">Email</label>
-                <input
-                {...register("email")}
-                placeholder="user@gmail.com"
-                type="email"
-                />
-            </div>
-            
-               <input
-                type="submit"
-                />
-                <Link to="/">rtrtrtrt</Link>
-            </form>
-            <a href='/registerForm' className='register-lable'> Resister </a>
-            <a href='/' > Back to home </a>
-    </div>
     )
 }
 
