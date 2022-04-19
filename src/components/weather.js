@@ -2,6 +2,7 @@ import React from 'react'
 import UseFetch from '../hooks/UseFetch';
 import WeatherList from './WeatherList';
 import CitySelector from './CitySelector'
+// import '../styles/weather.css'
 
 const Weather = () => {
 
@@ -14,8 +15,10 @@ const Weather = () => {
    }
   return (
       <div>
-       <CitySelector onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=3f87189f1aac3532836f8ddb60ca2990`)} />
-       {getContent()} 
+        <div className='mt-4 bg-info'>
+          <CitySelector onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=3f87189f1aac3532836f8ddb60ca2990`)} />
+          {getContent()} 
+       </div>
        </div>
    
   );
