@@ -13,19 +13,27 @@ const Login = () => {
         router("/")
       }
     const onSubmit = (data) => {
-        
-    const userExist =()=>{ 
+       const email=data.email 
+       console.log(email)
+      const userExist =()=>{ 
+        console.table(data)
+        console.table(userdata)
+        //kolla om användaren existerar i userDB
+        userdata.map((user) =>{
+            if (user.email=== email){
+                console.log('wellcom',data)
 
-    console.table(data)
-    console.table(userdata)
-    //kolla om användaren existerar i userDB
-     {goHome()}
+            }else{
+                console.log('you have to register') 
+            }
+        })
 
-    } 
-userExist()
+        {goHome()}
 
-    
-};
+      } 
+
+      userExist()
+   };
     return (
 <form  className='logoin-form' onSubmit={handleSubmit(onSubmit)}>
         <h1 className='p-4'>Login</h1>
