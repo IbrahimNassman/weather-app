@@ -8,7 +8,9 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #a0e5e7
+    margin-top: 10rem;
+    border-radius: 10px;
+    background-color: #a0e5e7;
 }
 
 h1 {

@@ -4,6 +4,7 @@ import { Input, PasswordInput, Button} from '@mantine/core'
 import { useLocalStorage } from '@mantine/hooks';
 import '../styles/registerform.css'
 import { Link } from "react-router-dom";
+import Navbar from '../components/navbar';
 
 
 const RegisterForm = () => {
@@ -40,12 +41,13 @@ const onSubmit = (data) => {
 
 
   return (
-
+    <>
+    <Navbar />
       <form className='register-form' onSubmit={handleSubmit(onSubmit)}>
         <h1 className='p-4'>Register Form</h1>
-       <Input {...register("username", { required: true })} className='register-input'  placeholder="Username"/>
-       <Input type="email" {...register("email", { required: true })}  className='register-email' placeholder="Email"/>
-       <PasswordInput
+        <Input {...register("username", { required: true })} className='register-input'  placeholder="Username"/>
+        <Input type="email" {...register("email", { required: true })}  className='register-email' placeholder="Email"/>
+        <PasswordInput
           type="password"
           className='register-password'
           {...register('password')}
@@ -61,7 +63,7 @@ const onSubmit = (data) => {
         <Link to="/login">Login</Link>
       </div>
     </form> 
-    
+    </>
   )
 }
 

@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-// import {API_KEY, API_BASE_URL} from '../apis/config';
 import {Row, Col, FormControl, Button} from 'react-bootstrap';
+import Navbar from '../components/navbar'
 
 const CitySelector = ({onSearch}) => {
     const [city, setCity] = useState('');
 
     return (
         <>
+            <Navbar />
             <Row>
                 <Col>
                 <h1>Search your city</h1>
@@ -16,7 +17,7 @@ const CitySelector = ({onSearch}) => {
             <Row>
                 <Col xs={4}>
                     <FormControl
-                        placeholder="Enter city"
+                        placeholder="Enter a city"
                         onChange={(event) => setCity(event.target.value)}
                         value={city}
                     />

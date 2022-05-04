@@ -4,16 +4,16 @@ import {Navbar, Container, Nav } from 'react-bootstrap';
 const navbar = () => {
   return (
     <div>
-     <Navbar bg="primary" variant="dark">
+      <Navbar bg="primary" variant="dark">
         <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">Home</Navbar.Brand>
             <Nav className="me-auto">
-            {/* <Nav.Link href="home">Home</Nav.Link> */}
-            <Nav.Link href="weather">Weather</Nav.Link>
-            <Nav.Link href="login">Login</Nav.Link>
-        </Nav>
-       </Container>
-   </Navbar>
+              {/* <Nav.Link href="home">Home</Nav.Link> */}
+              <Nav.Link href="weather">Weather</Nav.Link>
+              <Nav.Link href="login">Login</Nav.Link>
+            </Nav>
+        </Container>
+      </Navbar>
     </div>
   )
 }

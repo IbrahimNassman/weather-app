@@ -1,8 +1,10 @@
 .register-form {
     max-width: 500px;
     margin: 0 auto;
+    margin-top: 10rem;
     padding: 2rem;
-    background-color: #a0e5e7
+    border-radius: 10px;
+    background-color: #a0e5e7;
 }
 .register {
     background: #0e101c;
